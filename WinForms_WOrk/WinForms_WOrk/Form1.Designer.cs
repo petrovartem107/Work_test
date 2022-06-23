@@ -36,7 +36,11 @@
             this.сохранитьКакToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.импортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.экспортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.menuStrip1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -73,44 +77,70 @@
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.открытьToolStripMenuItem.Text = "Открыть";
             // 
             // создатьToolStripMenuItem
             // 
             this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
-            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.создатьToolStripMenuItem.Text = "Создать";
             // 
             // сохранитьКакToolStripMenuItem
             // 
             this.сохранитьКакToolStripMenuItem.Name = "сохранитьКакToolStripMenuItem";
-            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.сохранитьКакToolStripMenuItem.Text = "Сохранить как";
             // 
             // импортToolStripMenuItem
             // 
             this.импортToolStripMenuItem.Name = "импортToolStripMenuItem";
-            this.импортToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.импортToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.импортToolStripMenuItem.Text = "Импорт";
             // 
             // экспортToolStripMenuItem
             // 
             this.экспортToolStripMenuItem.Name = "экспортToolStripMenuItem";
-            this.экспортToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.экспортToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.экспортToolStripMenuItem.Text = "Экспорт";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.toolStripComboBox1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 28);
+            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(44, 25);
+            this.toolStripLabel1.Text = "Лист:";
+            // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 28);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,5 +156,8 @@
         private ToolStripMenuItem сохранитьКакToolStripMenuItem;
         private ToolStripMenuItem импортToolStripMenuItem;
         private ToolStripMenuItem экспортToolStripMenuItem;
+        private ToolStrip toolStrip1;
+        private ToolStripLabel toolStripLabel1;
+        private ToolStripComboBox toolStripComboBox1;
     }
 }
