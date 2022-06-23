@@ -1,5 +1,6 @@
 using ExcelDataReader;
 using System.Data;
+using System.IO;
 
 namespace WinForms_WOrk
 
@@ -35,6 +36,29 @@ namespace WinForms_WOrk
             {
 
                 MessageBox.Show(ex.Message, "Îøèáêà!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void OpenExcelFile (string path)
+        {
+            FileStream stream = File.Open(path, FileMode.Open, FileAccess.Read);
+
+            IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream);
+
+            DataSet db = reader.AsDataSet(new ExcelDataSetConfiguration()
+            {
+                ConfigureDataTable = (x) => new ExcelDataTableConfiguration()
+                {
+                    UseHeaderRow = true
+                }
+            });
+
+            tableCollection = db.Tables;
+
+            toolStripComboBox1.Items.Clear();
+
+            foreach(DataTable table in tableCollection)
+            {
+                toolStripComboBox1.Items.Add(table.TableName);
             }
         }
     }
