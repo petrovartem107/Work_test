@@ -25,6 +25,8 @@ namespace WinForms_WOrk
                     fileNmane = openFileDialog1.FileName;
 
                     Text = fileNmane;
+
+                    OpenExcelFile(fileNmane);
                 }
 
                 else
@@ -60,6 +62,15 @@ namespace WinForms_WOrk
             {
                 toolStripComboBox1.Items.Add(table.TableName);
             }
+
+            toolStripComboBox1.SelectedIndex = 0;
+        }
+
+        private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable table = tableCollection[Convert.ToString(toolStripComboBox1.SelectedItem)];
+
+            dataGridView1.DataSource = table;
         }
     }
 }
