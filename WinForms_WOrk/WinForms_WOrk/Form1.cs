@@ -1,12 +1,15 @@
 using ExcelDataReader;
 using System.Data;
 using System.IO;
+using System.Text;
+using System.Windows.Forms;
 
 namespace WinForms_WOrk
 
 {
     public partial class Form1 : Form
     {
+
         private string fileNmane = string.Empty;
 
         private DataTableCollection tableCollection = null;
@@ -68,8 +71,7 @@ namespace WinForms_WOrk
 
         private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataTable table = tableCollection[Convert.ToString(toolStripComboBox1.SelectedItem)];
-
+            DataTable table = tableCollection[toolStripComboBox1.SelectedIndex];
             dataGridView1.DataSource = table;
         }
     }
